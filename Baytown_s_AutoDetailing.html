@@ -1,0 +1,1529 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baytown’s AutoDetailing | Precision Facility & Mobile Detailing | Baytown, TX</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts Inter & Orbitron -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Orbitron:wght@700;800;900&display=swap" rel="stylesheet">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              black: '#090A0E',
+              dark: '#0E1015',
+              surface: '#141720',
+              card: '#181C26',
+              border: '#262C3D',
+              borderLight: 'rgba(255, 255, 255, 0.08)',
+              red: '#E10600',
+              redHover: '#C40500',
+              redGlow: '#FF1E1E',
+              silver: '#94A3B8'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Orbitron', 'sans-serif'],
+          },
+          boxShadow: {
+            'red-glow': '0 0 25px -4px rgba(225, 6, 0, 0.5)',
+            'red-glow-lg': '0 0 40px -2px rgba(225, 6, 0, 0.65)',
+            'card-glass': '0 10px 30px -10px rgba(0, 0, 0, 0.7)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #090A0E;
+      color: #E2E8F0;
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+    .carbon-texture {
+      background-image: 
+        radial-gradient(rgba(225, 6, 0, 0.08) 1px, transparent 1px),
+        radial-gradient(rgba(255, 255, 255, 0.05) 1px, #090A0E 1px);
+      background-size: 28px 28px;
+      background-position: 0 0, 14px 14px;
+    }
+    .glass-card {
+      background: rgba(20, 23, 32, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+    }
+    .glass-card:hover {
+      border-color: rgba(225, 6, 0, 0.4);
+    }
+    .glow-border {
+      border: 1px solid rgba(225, 6, 0, 0.45);
+      box-shadow: 0 0 20px -3px rgba(225, 6, 0, 0.35);
+    }
+    /* Comparison slider */
+    .comparison-wrapper {
+      position: relative;
+      overflow: hidden;
+      user-select: none;
+    }
+    .comparison-handle {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background-color: #E10600;
+      cursor: ew-resize;
+      z-index: 30;
+      box-shadow: 0 0 14px #FF1E1E;
+    }
+    .comparison-handle-btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 42px;
+      height: 42px;
+      background: #E10600;
+      border: 3px solid #FFFFFF;
+      border-radius: 9999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+    }
+  </style>
+</head>
+<body class="selection:bg-brand-red selection:text-white">
+
+  <!-- Top Operational Banner & Hookup Notice -->
+  <div class="bg-gradient-to-r from-brand-black via-[#230A0A] to-brand-black border-b border-brand-red/30 py-2.5 px-4 text-xs">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-2.5">
+      <div class="flex items-center gap-2 text-center md:text-left flex-wrap justify-center md:justify-start">
+        <span class="inline-flex items-center gap-1.5 bg-brand-red/20 text-brand-red px-2 py-0.5 rounded font-black tracking-wide border border-brand-red/30 uppercase text-[10px]">
+          <i data-lucide="zap" class="w-3 h-3"></i> Service Notice
+        </span>
+        <span class="text-zinc-300 font-medium">Facility-Based & Mobile Services Available in Baytown & Surrounding Areas</span>
+        <span class="text-zinc-500 hidden lg:inline">•</span>
+        <span class="text-zinc-400 text-[11px] hidden lg:inline">
+          (Mobile Service Note: Expanding our complete off-grid setup; client water & electrical hookup required on-site)
+        </span>
+      </div>
+
+      <div class="flex items-center gap-4 text-zinc-300 shrink-0">
+        <a href="https://instagram.com/baytownautodetailing" target="_blank" rel="noopener noreferrer" class="hover:text-brand-red flex items-center gap-1.5 transition">
+          <i data-lucide="instagram" class="w-3.5 h-3.5 text-brand-red"></i>
+          <span class="font-medium">@baytownautodetailing</span>
+        </a>
+        <a href="https://tiktok.com/@baytowns.autodetailing" target="_blank" rel="noopener noreferrer" class="hover:text-brand-red flex items-center gap-1.5 transition">
+          <svg class="w-3.5 h-3.5 fill-current text-brand-red" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.29 0 .58.04.86.12V9.42a6.37 6.37 0 0 0-.86-.06 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 9.79 5.38 6.27 6.27 0 0 0 2.89-5.38V8.92a8.28 8.28 0 0 0 4.88 1.58V7.05a4.85 4.85 0 0 1-1.1-.36z"/></svg>
+          <span class="font-medium">TikTok</span>
+        </a>
+        <a href="tel:3466600690" class="font-bold text-white bg-brand-red hover:bg-brand-redHover px-2.5 py-1 rounded text-xs transition shadow-red-glow">
+          (346) 660-0690
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation Header -->
+  <header class="sticky top-0 z-50 bg-brand-black/90 backdrop-blur-md border-b border-brand-borderLight transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-brand-red via-red-700 to-black flex items-center justify-center text-white border border-red-500/40 shadow-red-glow group-hover:scale-105 transition">
+          <i data-lucide="sparkles" class="w-6 h-6 text-white"></i>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-extrabold text-xl sm:text-2xl tracking-wider text-white font-display leading-tight">BAYTOWN’S</span>
+          <span class="text-[10px] font-black tracking-widest text-brand-red uppercase flex items-center gap-1.5 -mt-1">
+            AUTO DETAILING <span class="w-1.5 h-1.5 rounded-full bg-brand-red animate-pulse"></span>
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Links -->
+      <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold text-zinc-300">
+        <a href="#services" class="hover:text-brand-red transition">Detailing Packages</a>
+        <a href="#powersports" class="hover:text-brand-red transition">ATV & Powersports</a>
+        <a href="#addons" class="hover:text-brand-red transition">Premium Add-Ons</a>
+        <a href="#calculator" class="hover:text-brand-red transition">Price Calculator</a>
+        <a href="#transformations" class="hover:text-brand-red transition">Before & After</a>
+        <a href="#facility-mobile" class="hover:text-brand-red transition">Facility & Mobile Info</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="hidden sm:flex items-center gap-4">
+        <a href="tel:3466600690" class="text-zinc-300 hover:text-white text-sm font-bold flex items-center gap-2">
+          <i data-lucide="phone-call" class="w-4 h-4 text-brand-red"></i>
+          <span>(346) 660-0690</span>
+        </a>
+        <a href="#booking" class="bg-brand-red hover:bg-brand-redHover text-white text-sm font-extrabold px-5 py-2.5 rounded-xl shadow-red-glow transition flex items-center gap-2">
+          <span>Book Appointment</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button id="mobile-menu-btn" class="lg:hidden text-zinc-300 hover:text-white p-2" aria-label="Toggle menu">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-brand-borderLight bg-brand-dark px-6 py-5 space-y-3.5">
+      <a href="#services" class="mobile-nav-link block text-zinc-200 hover:text-brand-red font-semibold py-1">Detailing Packages</a>
+      <a href="#powersports" class="mobile-nav-link block text-zinc-200 hover:text-brand-red font-semibold py-1">ATV & Powersports</a>
+      <a href="#addons" class="mobile-nav-link block text-zinc-200 hover:text-brand-red font-semibold py-1">Premium Add-Ons</a>
+      <a href="#calculator" class="mobile-nav-link block text-zinc-200 hover:text-brand-red font-semibold py-1">Instant Price Calculator</a>
+      <a href="#transformations" class="mobile-nav-link block text-zinc-200 hover:text-brand-red font-semibold py-1">Before & After Gallery</a>
+      <a href="#facility-mobile" class="mobile-nav-link block text-zinc-200 hover:text-brand-red font-semibold py-1">Facility vs Mobile Info</a>
+      
+      <div class="pt-4 border-t border-white/10 flex flex-col gap-2.5">
+        <a href="tel:3466600690" class="w-full py-3 bg-zinc-800 text-white rounded-xl font-bold flex items-center justify-center gap-2">
+          <i data-lucide="phone" class="w-4 h-4 text-brand-red"></i> Call (346) 660-0690
+        </a>
+        <a href="#booking" class="mobile-nav-link w-full py-3 bg-brand-red text-white text-center font-extrabold rounded-xl shadow-red-glow">
+          Book Detailing Now
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative min-h-[92vh] flex items-center justify-center pt-8 pb-20 carbon-texture overflow-hidden">
+    <!-- Atmospheric glows -->
+    <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[700px] h-[360px] bg-brand-red/20 blur-[130px] rounded-full pointer-events-none"></div>
+    <div class="absolute top-1/2 -left-40 w-96 h-96 bg-brand-red/10 blur-[120px] rounded-full pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      
+      <!-- Operational status badge -->
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-surface border border-brand-red/40 text-xs font-bold uppercase tracking-wider text-zinc-200 mb-6 shadow-red-glow">
+        <span class="w-2.5 h-2.5 rounded-full bg-brand-red animate-ping"></span>
+        Facility Drop-off & Mobile Services Across Baytown, TX
+      </div>
+
+      <!-- Main Headline -->
+      <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black text-white tracking-tight leading-[1.08] mb-6">
+        PRECISION DETAILING, <br class="hidden sm:inline">
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-zinc-200 to-zinc-400">PAINT CORRECTION & </span>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-red via-red-500 to-brand-redGlow font-display">CERAMIC COATING</span>
+      </h1>
+
+      <p class="max-w-3xl mx-auto text-base sm:text-lg lg:text-xl text-zinc-300 font-normal mb-8 leading-relaxed">
+        From everyday sedans, lifted 4-door trucks, and duallys to ATVs and side-by-sides. Experience uncompromising cleanliness, multi-stage machine polishing, and deep hydrophobic protection at our Baytown facility or at your location.
+      </p>
+
+      <!-- Hookup Transparency Alert Card -->
+      <div class="max-w-2xl mx-auto mb-10 bg-brand-surface/90 border border-brand-red/30 rounded-2xl p-4 text-left flex items-start gap-3.5 shadow-card-glass">
+        <div class="w-8 h-8 rounded-lg bg-brand-red/20 border border-brand-red/40 flex items-center justify-center shrink-0 text-brand-red mt-0.5">
+          <i data-lucide="info" class="w-4 h-4"></i>
+        </div>
+        <div class="text-xs sm:text-sm text-zinc-300">
+          <span class="text-white font-bold block mb-0.5">Mobile Service Notice:</span>
+          We are currently building our complete dedicated water & power unit. For mobile appointments at your home or workplace, customer water and electrical hookups are required on-site. Full facility drop-off also available.
+        </div>
+      </div>
+
+      <!-- Hero Call-To-Action Buttons -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#calculator" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-brand-red hover:bg-brand-redHover text-white font-black text-base shadow-red-glow flex items-center justify-center gap-3 transition">
+          <i data-lucide="calculator" class="w-5 h-5"></i>
+          <span>Instant Price Calculator</span>
+        </a>
+        <a href="#services" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-brand-surface hover:bg-brand-card text-zinc-200 border border-white/10 hover:border-brand-red/50 font-bold text-base flex items-center justify-center gap-3 transition">
+          <i data-lucide="layers" class="w-5 h-5 text-brand-red"></i>
+          <span>View Detailing Packages</span>
+        </a>
+      </div>
+
+      <!-- Feature Pill Badges -->
+      <div class="mt-14 grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-4xl mx-auto text-xs font-semibold text-zinc-300">
+        <div class="p-3 rounded-xl bg-brand-surface/70 border border-white/5 flex items-center justify-center gap-2">
+          <i data-lucide="check-circle" class="w-4 h-4 text-brand-red"></i>
+          <span>Sedans from $95</span>
+        </div>
+        <div class="p-3 rounded-xl bg-brand-surface/70 border border-white/5 flex items-center justify-center gap-2">
+          <i data-lucide="shield-check" class="w-4 h-4 text-brand-red"></i>
+          <span>Ceramic & Polish Elite</span>
+        </div>
+        <div class="p-3 rounded-xl bg-brand-surface/70 border border-white/5 flex items-center justify-center gap-2">
+          <i data-lucide="compass" class="w-4 h-4 text-brand-red"></i>
+          <span>ATV & SxS Detailing</span>
+        </div>
+        <div class="p-3 rounded-xl bg-brand-surface/70 border border-white/5 flex items-center justify-center gap-2">
+          <i data-lucide="star" class="w-4 h-4 text-amber-400 fill-amber-400"></i>
+          <span>5-Star Finish Guarantee</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Detailing Packages & Interactive Vehicle Class Selector -->
+  <section id="services" class="py-24 bg-brand-dark border-y border-white/5 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-brand-red mb-2">
+          <i data-lucide="gauge" class="w-4 h-4"></i> Transparent Service Tiers
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight">
+          DETAILED VEHICLE PACKAGES
+        </h2>
+        <p class="text-zinc-400 mt-3 text-sm sm:text-base">
+          Select your vehicle class below to view exact pricing for both our <strong>Standard Full Detail</strong> and our flagship <strong>Ultimate Detail Package</strong>.
+        </p>
+
+        <!-- Vehicle Size Switcher Tabs -->
+        <div class="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-2 p-1.5 rounded-2xl bg-brand-black border border-white/10 max-w-3xl mx-auto">
+          <button data-cat="sedan" class="cat-btn py-3 px-3 rounded-xl text-xs sm:text-sm font-bold text-white bg-brand-red shadow-red-glow transition flex flex-col items-center justify-center gap-1">
+            <i data-lucide="car" class="w-4 h-4"></i>
+            <span>Sedan Cars</span>
+          </button>
+          
+          <button data-cat="coupe-mini" class="cat-btn py-3 px-3 rounded-xl text-xs sm:text-sm font-semibold text-zinc-400 hover:text-white transition flex flex-col items-center justify-center gap-1">
+            <i data-lucide="zap" class="w-4 h-4"></i>
+            <span>Coupe / Mini SUV / Single Cab</span>
+          </button>
+          
+          <button data-cat="big-suv" class="cat-btn py-3 px-3 rounded-xl text-xs sm:text-sm font-semibold text-zinc-400 hover:text-white transition flex flex-col items-center justify-center gap-1">
+            <i data-lucide="shield" class="w-4 h-4"></i>
+            <span>Big SUV / 4-Door Truck</span>
+          </button>
+          
+          <button data-cat="dually" class="cat-btn py-3 px-3 rounded-xl text-xs sm:text-sm font-semibold text-zinc-400 hover:text-white transition flex flex-col items-center justify-center gap-1">
+            <i data-lucide="truck" class="w-4 h-4"></i>
+            <span>Dually Sized Trucks</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Comparison Cards: Standard Detail vs Ultimate Detail -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto items-stretch">
+        
+        <!-- Package 1: Standard Full Detail -->
+        <div class="glass-card rounded-3xl p-8 flex flex-col justify-between border border-white/10 relative hover:border-white/20 transition-all duration-300">
+          <div>
+            <div class="flex justify-between items-start mb-4">
+              <div>
+                <span class="text-xs uppercase font-extrabold tracking-widest text-zinc-400">Complete Care</span>
+                <h3 class="text-2xl sm:text-3xl font-black text-white mt-1">Standard Full Detail</h3>
+              </div>
+              <span class="text-xs font-bold px-3 py-1 rounded-full bg-zinc-800 text-zinc-300 border border-white/10">Full In & Out</span>
+            </div>
+
+            <p class="text-zinc-400 text-sm mb-6">
+              Complete interior refresh paired with gentle foam wash, wheel degreasing, streak-free glass, and thorough cabin vacuuming.
+            </p>
+
+            <div class="p-4 rounded-2xl bg-brand-black/70 border border-white/5 mb-8">
+              <div class="text-zinc-400 text-xs font-semibold uppercase tracking-wider mb-1">Guaranteed Price</div>
+              <div class="flex items-baseline gap-2">
+                <span class="text-5xl font-black text-white font-display" id="standard-price-display">$95</span>
+                <span class="text-zinc-400 text-sm" id="standard-vehicle-label">Sedan Category</span>
+              </div>
+            </div>
+
+            <!-- Standard Checklist -->
+            <ul class="space-y-3.5 text-sm text-zinc-300 mb-8 border-t border-white/10 pt-6">
+              <li class="flex items-start gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-brand-red shrink-0 mt-0.5"></i>
+                <span>Complete interior vacuum (floors, seats, floor mats, trunk)</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-brand-red shrink-0 mt-0.5"></i>
+                <span>Full dashboard, console, door panel & cup holder wipe-down</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-brand-red shrink-0 mt-0.5"></i>
+                <span>Foam cannon pH-neutral exterior contact hand wash</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-brand-red shrink-0 mt-0.5"></i>
+                <span>Wheel face, wheel barrels, and tires degreased & dressed</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-brand-red shrink-0 mt-0.5"></i>
+                <span>Streak-free interior and exterior clarity glass cleaning</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-brand-red shrink-0 mt-0.5"></i>
+                <span>Door jamb clean & dry + fresh interior scent</span>
+              </li>
+            </ul>
+          </div>
+
+          <button onclick="bookDirect('Standard Full Detail', 'standard-price-display')" class="w-full py-4 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-white font-bold text-sm tracking-wide transition border border-white/10 hover:border-brand-red flex items-center justify-center gap-2">
+            <span>Select Standard Detail</span>
+            <i data-lucide="arrow-right" class="w-4 h-4 text-brand-red"></i>
+          </button>
+        </div>
+
+        <!-- Package 2: Ultimate Detail Package (FLAGSHIP) -->
+        <div class="glass-card rounded-3xl p-8 flex flex-col justify-between border-2 border-brand-red relative bg-gradient-to-b from-[#1F0C0E] via-brand-surface to-brand-surface glow-border">
+          <!-- Featured Badge -->
+          <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-brand-red text-white text-xs font-black uppercase tracking-widest px-4 py-1.5 rounded-full shadow-red-glow flex items-center gap-1.5">
+            <i data-lucide="award" class="w-3.5 h-3.5"></i>
+            <span>Ultimate Flagship Package</span>
+          </div>
+
+          <div>
+            <div class="flex justify-between items-start mb-4 pt-2">
+              <div>
+                <span class="text-xs uppercase font-extrabold tracking-widest text-brand-red">Full Detail + Correction + Ceramic</span>
+                <h3 class="text-2xl sm:text-3xl font-black text-white mt-1">Ultimate Detail Package</h3>
+              </div>
+              <span class="text-xs font-bold px-3 py-1 rounded-full bg-brand-red/20 text-brand-red border border-brand-red/40">Multi-Stage</span>
+            </div>
+
+            <p class="text-zinc-300 text-sm mb-6">
+              Our premier transformation: bumper-to-bumper deep detail combined with machine paint correction to eradicate swirls and locked in with long-term ceramic coating.
+            </p>
+
+            <div class="p-4 rounded-2xl bg-brand-black/90 border border-brand-red/40 mb-8">
+              <div class="text-brand-red text-xs font-bold uppercase tracking-wider mb-1">Starting at Package Price</div>
+              <div class="flex items-baseline gap-2">
+                <span class="text-5xl font-black text-white font-display" id="ultimate-price-display">$650</span>
+                <span class="text-zinc-400 text-sm" id="ultimate-vehicle-label">Sedan Category</span>
+              </div>
+            </div>
+
+            <!-- Ultimate Checklist -->
+            <ul class="space-y-3.5 text-sm text-zinc-200 mb-8 border-t border-white/10 pt-6">
+              <li class="flex items-start gap-3">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-red shrink-0 mt-0.5"></i>
+                <span class="font-semibold text-white">All Standard Full Interior & Exterior Detail services</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-red shrink-0 mt-0.5"></i>
+                <span>Iron decontamination bath + full vehicle clay bar exfoliation</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-red shrink-0 mt-0.5"></i>
+                <span class="text-red-400 font-semibold">Multi-Stage Machine Paint Correction (eliminates swirls & haze)</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-red shrink-0 mt-0.5"></i>
+                <span class="text-white font-semibold">Professional Long-Term Nano-Ceramic Coating application</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-red shrink-0 mt-0.5"></i>
+                <span>Extreme hydrophobic gloss, UV rejection, and chemical defense</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-red shrink-0 mt-0.5"></i>
+                <span>Deep interior conditioning for leather, plastics, and vinyl</span>
+              </li>
+            </ul>
+          </div>
+
+          <button onclick="bookDirect('Ultimate Detail Package', 'ultimate-price-display')" class="w-full py-4 rounded-xl bg-brand-red hover:bg-brand-redHover text-white font-extrabold text-sm tracking-wide transition shadow-red-glow flex items-center justify-center gap-2">
+            <span>Select Ultimate Package</span>
+            <i data-lucide="sparkles" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Powersports Detailing Section -->
+  <section id="powersports" class="py-20 bg-brand-black carbon-texture relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-brand-red text-xs font-bold uppercase tracking-widest">Off-Road & Recreation</span>
+        <h2 class="text-3xl sm:text-5xl font-black text-white mt-1">POWERSPORTS & ATV DETAILING</h2>
+        <p class="text-zinc-400 text-sm sm:text-base mt-2">
+          Baytown trails and ranch mud are tough on machines. We strip baked-on mud, degrease undercarriages, polish plastics, and protect frames.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        
+        <!-- ATV Detailing -->
+        <div class="glass-card rounded-2xl p-8 border border-white/10 flex flex-col justify-between hover:border-brand-red/50 transition">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs uppercase font-extrabold tracking-wider text-brand-red">Single Rider 4-Wheeler</span>
+              <span class="text-xs font-bold px-2.5 py-1 rounded bg-zinc-800 text-zinc-300">Fast Turnaround</span>
+            </div>
+            <h3 class="text-2xl font-black text-white">ATV Detailing Service</h3>
+            <p class="text-zinc-400 text-sm mt-2 mb-6">
+              Complete deep clean removing caked clay, engine degrease, plastic gloss restore, and suspension wipe-down.
+            </p>
+            <div class="mb-6 flex items-baseline gap-2">
+              <span class="text-5xl font-black text-white font-display">$125</span>
+              <span class="text-zinc-500 text-sm">flat rate</span>
+            </div>
+            <ul class="space-y-2.5 text-xs text-zinc-300 mb-6">
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-brand-red"></i>
+                <span>High-pressure mud & grit blast</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-brand-red"></i>
+                <span>Degrease engine casing, exhaust & skid plates</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-brand-red"></i>
+                <span>UV guard plastic & vinyl seat rejuvenation</span>
+              </li>
+            </ul>
+          </div>
+          <button onclick="bookPowersports('ATV Detailing Service', 125)" class="w-full py-3.5 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-white font-bold text-sm transition border border-white/10 hover:border-brand-red">
+            Book ATV Detail ($125)
+          </button>
+        </div>
+
+        <!-- Side-by-Side ATV -->
+        <div class="glass-card rounded-2xl p-8 border border-white/10 flex flex-col justify-between hover:border-brand-red/50 transition bg-gradient-to-br from-brand-surface to-[#170E10]">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs uppercase font-extrabold tracking-wider text-brand-red">Multi-Passenger UTV / SxS</span>
+              <span class="text-xs font-bold px-2.5 py-1 rounded bg-brand-red/20 text-brand-red border border-brand-red/30">Heavy Duty</span>
+            </div>
+            <h3 class="text-2xl font-black text-white">Side-by-Side (SxS) ATV Detailing</h3>
+            <p class="text-zinc-400 text-sm mt-2 mb-6">
+              Comprehensive wash for Polaris RZR, Can-Am Maverick, Ranger, and Defender rigs with roll-cage and cockpit clean.
+            </p>
+            <div class="mb-6 flex items-baseline gap-2">
+              <span class="text-5xl font-black text-white font-display">$145</span>
+              <span class="text-zinc-500 text-sm">flat rate</span>
+            </div>
+            <ul class="space-y-2.5 text-xs text-zinc-300 mb-6">
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-brand-red"></i>
+                <span>Roll-cage, harnesses, and cockpit pressure cleanse</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-brand-red"></i>
+                <span>Full wheel, beadlock, and deep tire scrubbing</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-brand-red"></i>
+                <span>Windscreen clarity cleanse & hydrophobic coat</span>
+              </li>
+            </ul>
+          </div>
+          <button onclick="bookPowersports('Side-by-Side (SxS) ATV Detailing', 145)" class="w-full py-3.5 rounded-xl bg-brand-red hover:bg-brand-redHover text-white font-bold text-sm transition shadow-red-glow">
+            Book Side-by-Side Detail ($145)
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Premium Add-ons Ala-Carte Section -->
+  <section id="addons" class="py-24 bg-brand-dark border-t border-white/5 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-brand-red text-xs font-bold uppercase tracking-widest">Targeted Upgrades</span>
+        <h2 class="text-3xl sm:text-5xl font-black text-white mt-1">PREMIUM SPECIALIZED ADD-ONS</h2>
+        <p class="text-zinc-400 text-sm sm:text-base mt-2">
+          Customize your appointment with individual enhancements, deep interior hot extractions, and standalone coatings.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+        
+        <!-- Wax -->
+        <div class="glass-card p-5 rounded-2xl border border-white/5 flex flex-col justify-between">
+          <div>
+            <div class="text-xs uppercase font-extrabold text-brand-red">Exterior Glow</div>
+            <div class="text-lg font-bold text-white mt-1">Hand Wax Application</div>
+            <p class="text-xs text-zinc-400 mt-1">Carnauba or polymer hand wax for immediate high-gloss shine & protection.</p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-white/5 flex items-center justify-between">
+            <span class="text-xl font-black text-white font-display">$25</span>
+            <span class="text-[11px] text-zinc-500">add-on</span>
+          </div>
+        </div>
+
+        <!-- Pet Hair Removal -->
+        <div class="glass-card p-5 rounded-2xl border border-white/5 flex flex-col justify-between">
+          <div>
+            <div class="text-xs uppercase font-extrabold text-brand-red">Deep Interior</div>
+            <div class="text-lg font-bold text-white mt-1">Pet Hair Removal</div>
+            <p class="text-xs text-zinc-400 mt-1">Pneumatic purge, rubber stone rake, and fur extraction from woven fabrics.</p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-white/5 flex items-center justify-between">
+            <span class="text-xl font-black text-white font-display">$25+</span>
+            <span class="text-[11px] text-zinc-500">starts at</span>
+          </div>
+        </div>
+
+        <!-- Excessive Trash Removal -->
+        <div class="glass-card p-5 rounded-2xl border border-white/5 flex flex-col justify-between">
+          <div>
+            <div class="text-xs uppercase font-extrabold text-brand-red">Sanitation</div>
+            <div class="text-lg font-bold text-white mt-1">Excessive Trash Removal</div>
+            <p class="text-xs text-zinc-400 mt-1">Heavy debris bagging, disposal, and pre-cleaning prep for neglected cabs.</p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-white/5 flex items-center justify-between">
+            <span class="text-xl font-black text-white font-display">$30+</span>
+            <span class="text-[11px] text-zinc-500">starts at</span>
+          </div>
+        </div>
+
+        <!-- Engine Bay -->
+        <div class="glass-card p-5 rounded-2xl border border-white/5 flex flex-col justify-between">
+          <div>
+            <div class="text-xs uppercase font-extrabold text-brand-red">Under-the-Hood</div>
+            <div class="text-lg font-bold text-white mt-1">Engine Bay Detail</div>
+            <p class="text-xs text-zinc-400 mt-1">Safe electrical masking, steam degrease, dirt rinse, and matte silicone-free dress.</p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-white/5 flex items-center justify-between">
+            <span class="text-xl font-black text-white font-display">$45+</span>
+            <span class="text-[11px] text-zinc-500">starts at</span>
+          </div>
+        </div>
+
+        <!-- Windshield Ceramic -->
+        <div class="glass-card p-5 rounded-2xl border border-white/5 flex flex-col justify-between">
+          <div>
+            <div class="text-xs uppercase font-extrabold text-brand-red">Optical Shield</div>
+            <div class="text-lg font-bold text-white mt-1">Windshield Ceramic</div>
+            <p class="text-xs text-zinc-400 mt-1">Glass polish decontamination followed by hydrophobic repellent ceramic barrier.</p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-white/5 flex items-center justify-between">
+            <span class="text-xl font-black text-white font-display">$75+</span>
+            <span class="text-[11px] text-zinc-500">starts at</span>
+          </div>
+        </div>
+
+        <!-- Wheel Ceramic -->
+        <div class="glass-card p-5 rounded-2xl border border-white/5 flex flex-col justify-between">
+          <div>
+            <div class="text-xs uppercase font-extrabold text-brand-red">Brake Dust Armor</div>
+            <div class="text-lg font-bold text-white mt-1">Wheel Face Ceramic</div>
+            <p class="text-xs text-zinc-400 mt-1">Heat-resistant coating preventing corrosive brake dust embedding on wheels.</p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-white/5 flex items-center justify-between">
+            <span class="text-xl font-black text-white font-display">$85</span>
+            <span class="text-[11px] text-zinc-500">set of 4 faces</span>
+          </div>
+        </div>
+
+        <!-- Trim Ceramic -->
+        <div class="glass-card p-5 rounded-2xl border border-white/5 flex flex-col justify-between">
+          <div>
+            <div class="text-xs uppercase font-extrabold text-brand-red">Faded Plastic Fix</div>
+            <div class="text-lg font-bold text-white mt-1">Trim Ceramic Restoration</div>
+            <p class="text-xs text-zinc-400 mt-1">Restores chalky faded black cladding, bed caps, and bumpers back to rich black.</p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-white/5 flex items-center justify-between">
+            <span class="text-xl font-black text-white font-display">$85</span>
+            <span class="text-[11px] text-zinc-500">flat rate</span>
+          </div>
+        </div>
+
+        <!-- Carpet Shampooing -->
+        <div class="glass-card p-5 rounded-2xl border border-white/5 flex flex-col justify-between">
+          <div>
+            <div class="text-xs uppercase font-extrabold text-brand-red">Deep Extraction</div>
+            <div class="text-lg font-bold text-white mt-1">Carpet Shampooing</div>
+            <p class="text-xs text-zinc-400 mt-1">Enzymatic pre-spray, brush drill agitation, and commercial hot water extraction.</p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-white/5 flex items-center justify-between">
+            <span class="text-xl font-black text-white font-display">$155+</span>
+            <span class="text-[11px] text-zinc-500">starts at</span>
+          </div>
+        </div>
+
+        <!-- Seat Shampooing -->
+        <div class="glass-card p-5 rounded-2xl border border-white/5 flex flex-col justify-between">
+          <div>
+            <div class="text-xs uppercase font-extrabold text-brand-red">Fabric Revive</div>
+            <div class="text-lg font-bold text-white mt-1">Seat Shampooing</div>
+            <p class="text-xs text-zinc-400 mt-1">Lifts deeply set drink spills, body oil, food spots, and stale odors from seats.</p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-white/5 flex items-center justify-between">
+            <span class="text-xl font-black text-white font-display">$200+</span>
+            <span class="text-[11px] text-zinc-500">starts at</span>
+          </div>
+        </div>
+
+        <!-- Standalone Ceramic Coating -->
+        <div class="glass-card p-5 rounded-2xl border border-white/5 flex flex-col justify-between">
+          <div>
+            <div class="text-xs uppercase font-extrabold text-brand-red">Protection</div>
+            <div class="text-lg font-bold text-white mt-1">Standalone Ceramic Coating</div>
+            <p class="text-xs text-zinc-400 mt-1">Professional nano-ceramic bond for vehicles that do not require multi-stage correction.</p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-white/5 flex items-center justify-between">
+            <span class="text-xl font-black text-brand-red font-display">$300+</span>
+            <span class="text-[11px] text-zinc-500">starts at</span>
+          </div>
+        </div>
+
+        <!-- Standalone Paint Correction -->
+        <div class="glass-card p-5 rounded-2xl border border-white/5 flex flex-col justify-between sm:col-span-2 xl:col-span-2">
+          <div>
+            <div class="text-xs uppercase font-extrabold text-brand-red">Flawless Clarity</div>
+            <div class="text-lg font-bold text-white mt-1">Standalone Paint Correction</div>
+            <p class="text-xs text-zinc-400 mt-1">Rotary and dual-action micro-abrasive compounding and finishing polish. Eliminates spiderwebs, wash marring, buffer trails, and water etchings.</p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-white/5 flex items-center justify-between">
+            <span class="text-2xl font-black text-brand-red font-display">Starting at $350+</span>
+            <span class="text-[11px] text-zinc-400">Depends on vehicle size & clear coat depth</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Live Interactive Quote Builder -->
+  <section id="calculator" class="py-24 bg-brand-black carbon-texture relative">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-12">
+        <span class="text-brand-red text-xs font-bold uppercase tracking-widest">Instant Transparency</span>
+        <h2 class="text-3xl sm:text-5xl font-black text-white mt-1">INTERACTIVE PRICE CALCULATOR</h2>
+        <p class="text-zinc-400 text-sm mt-2">
+          Choose your vehicle class, base package, and add-ons for an instant estimated price, then transfer it directly to booking.
+        </p>
+      </div>
+
+      <div class="glass-card rounded-3xl p-6 sm:p-10 border border-white/10 shadow-2xl">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          <!-- Selections Column (7 cols) -->
+          <div class="lg:col-span-7 space-y-6">
+            
+            <!-- Step 1: Vehicle Category Selection -->
+            <div>
+              <label class="block text-xs uppercase font-extrabold text-zinc-300 tracking-wider mb-2">
+                1. Vehicle or Powersports Category
+              </label>
+              <select id="calc-vehicle-class" class="w-full bg-brand-surface text-white border border-brand-border rounded-xl px-4 py-3.5 text-sm focus:outline-none focus:border-brand-red">
+                <option value="sedan">Sedan Car</option>
+                <option value="coupe-mini">Sports Car Coupe / Single Cab Truck / Mini SUV</option>
+                <option value="big-suv">Big SUV / 4-Door Truck</option>
+                <option value="dually">Dually Sized Truck</option>
+                <option value="atv">ATV (Powersports 4-Wheeler)</option>
+                <option value="sxs">Side-by-Side (SxS) ATV</option>
+              </select>
+            </div>
+
+            <!-- Step 2: Detailing Package -->
+            <div id="calc-package-container">
+              <label class="block text-xs uppercase font-extrabold text-zinc-300 tracking-wider mb-2">
+                2. Detailing Package
+              </label>
+              <select id="calc-package-select" class="w-full bg-brand-surface text-white border border-brand-border rounded-xl px-4 py-3.5 text-sm focus:outline-none focus:border-brand-red">
+                <option value="standard" selected>Standard Full Detail (Full Interior & Exterior)</option>
+                <option value="ultimate">Ultimate Detail Package (Detail + Correction + Ceramic)</option>
+              </select>
+              <div id="calc-powersports-note" class="hidden text-xs text-brand-red font-medium mt-1">
+                *Powersports category has fixed complete specialty pricing selected.
+              </div>
+            </div>
+
+            <!-- Step 3: Add-on checkboxes -->
+            <div>
+              <label class="block text-xs uppercase font-extrabold text-zinc-300 tracking-wider mb-2">
+                3. Select Premium Add-Ons (Optional)
+              </label>
+              
+              <div class="space-y-2 max-h-72 overflow-y-auto pr-1">
+                
+                <label class="flex items-center justify-between p-3 rounded-xl bg-brand-surface/70 border border-white/5 hover:border-brand-red/40 cursor-pointer transition">
+                  <span class="flex items-center gap-3 text-xs sm:text-sm text-zinc-200">
+                    <input type="checkbox" value="25" data-title="Hand Wax" class="calc-addon-check rounded bg-zinc-900 border-zinc-700 text-brand-red focus:ring-brand-red">
+                    <span>Hand Wax Application</span>
+                  </span>
+                  <span class="text-xs font-bold text-brand-red">+$25</span>
+                </label>
+
+                <label class="flex items-center justify-between p-3 rounded-xl bg-brand-surface/70 border border-white/5 hover:border-brand-red/40 cursor-pointer transition">
+                  <span class="flex items-center gap-3 text-xs sm:text-sm text-zinc-200">
+                    <input type="checkbox" value="25" data-title="Pet Hair Removal" class="calc-addon-check rounded bg-zinc-900 border-zinc-700 text-brand-red focus:ring-brand-red">
+                    <span>Pet Hair Removal</span>
+                  </span>
+                  <span class="text-xs font-bold text-brand-red">+$25+</span>
+                </label>
+
+                <label class="flex items-center justify-between p-3 rounded-xl bg-brand-surface/70 border border-white/5 hover:border-brand-red/40 cursor-pointer transition">
+                  <span class="flex items-center gap-3 text-xs sm:text-sm text-zinc-200">
+                    <input type="checkbox" value="30" data-title="Excessive Trash Removal" class="calc-addon-check rounded bg-zinc-900 border-zinc-700 text-brand-red focus:ring-brand-red">
+                    <span>Excessive Trash Removal</span>
+                  </span>
+                  <span class="text-xs font-bold text-brand-red">+$30+</span>
+                </label>
+
+                <label class="flex items-center justify-between p-3 rounded-xl bg-brand-surface/70 border border-white/5 hover:border-brand-red/40 cursor-pointer transition">
+                  <span class="flex items-center gap-3 text-xs sm:text-sm text-zinc-200">
+                    <input type="checkbox" value="45" data-title="Engine Bay Detail" class="calc-addon-check rounded bg-zinc-900 border-zinc-700 text-brand-red focus:ring-brand-red">
+                    <span>Engine Bay Detail & Dressing</span>
+                  </span>
+                  <span class="text-xs font-bold text-brand-red">+$45+</span>
+                </label>
+
+                <label class="flex items-center justify-between p-3 rounded-xl bg-brand-surface/70 border border-white/5 hover:border-brand-red/40 cursor-pointer transition">
+                  <span class="flex items-center gap-3 text-xs sm:text-sm text-zinc-200">
+                    <input type="checkbox" value="75" data-title="Windshield Ceramic" class="calc-addon-check rounded bg-zinc-900 border-zinc-700 text-brand-red focus:ring-brand-red">
+                    <span>Windshield Ceramic Coating</span>
+                  </span>
+                  <span class="text-xs font-bold text-brand-red">+$75+</span>
+                </label>
+
+                <label class="flex items-center justify-between p-3 rounded-xl bg-brand-surface/70 border border-white/5 hover:border-brand-red/40 cursor-pointer transition">
+                  <span class="flex items-center gap-3 text-xs sm:text-sm text-zinc-200">
+                    <input type="checkbox" value="85" data-title="Wheel Face Ceramic" class="calc-addon-check rounded bg-zinc-900 border-zinc-700 text-brand-red focus:ring-brand-red">
+                    <span>Wheel Face Ceramic Coating (Set of 4)</span>
+                  </span>
+                  <span class="text-xs font-bold text-brand-red">+$85</span>
+                </label>
+
+                <label class="flex items-center justify-between p-3 rounded-xl bg-brand-surface/70 border border-white/5 hover:border-brand-red/40 cursor-pointer transition">
+                  <span class="flex items-center gap-3 text-xs sm:text-sm text-zinc-200">
+                    <input type="checkbox" value="85" data-title="Trim Ceramic Restoration" class="calc-addon-check rounded bg-zinc-900 border-zinc-700 text-brand-red focus:ring-brand-red">
+                    <span>Trim Restoration & Ceramic</span>
+                  </span>
+                  <span class="text-xs font-bold text-brand-red">+$85</span>
+                </label>
+
+                <label class="flex items-center justify-between p-3 rounded-xl bg-brand-surface/70 border border-white/5 hover:border-brand-red/40 cursor-pointer transition">
+                  <span class="flex items-center gap-3 text-xs sm:text-sm text-zinc-200">
+                    <input type="checkbox" value="155" data-title="Carpet Shampooing" class="calc-addon-check rounded bg-zinc-900 border-zinc-700 text-brand-red focus:ring-brand-red">
+                    <span>Carpet Shampooing & Hot Extraction</span>
+                  </span>
+                  <span class="text-xs font-bold text-brand-red">+$155+</span>
+                </label>
+
+                <label class="flex items-center justify-between p-3 rounded-xl bg-brand-surface/70 border border-white/5 hover:border-brand-red/40 cursor-pointer transition">
+                  <span class="flex items-center gap-3 text-xs sm:text-sm text-zinc-200">
+                    <input type="checkbox" value="200" data-title="Seat Shampooing" class="calc-addon-check rounded bg-zinc-900 border-zinc-700 text-brand-red focus:ring-brand-red">
+                    <span>Seat Shampooing & Extraction</span>
+                  </span>
+                  <span class="text-xs font-bold text-brand-red">+$200+</span>
+                </label>
+
+                <label class="flex items-center justify-between p-3 rounded-xl bg-brand-surface/70 border border-white/5 hover:border-brand-red/40 cursor-pointer transition">
+                  <span class="flex items-center gap-3 text-xs sm:text-sm text-zinc-200">
+                    <input type="checkbox" value="300" data-title="Standalone Ceramic" class="calc-addon-check rounded bg-zinc-900 border-zinc-700 text-brand-red focus:ring-brand-red">
+                    <span>Standalone Ceramic Coating</span>
+                  </span>
+                  <span class="text-xs font-bold text-brand-red">+$300+</span>
+                </label>
+
+                <label class="flex items-center justify-between p-3 rounded-xl bg-brand-surface/70 border border-white/5 hover:border-brand-red/40 cursor-pointer transition">
+                  <span class="flex items-center gap-3 text-xs sm:text-sm text-zinc-200">
+                    <input type="checkbox" value="350" data-title="Standalone Paint Correction" class="calc-addon-check rounded bg-zinc-900 border-zinc-700 text-brand-red focus:ring-brand-red">
+                    <span>Standalone Paint Correction</span>
+                  </span>
+                  <span class="text-xs font-bold text-brand-red">+$350+</span>
+                </label>
+
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Live Price Display Card (5 cols) -->
+          <div class="lg:col-span-5 bg-gradient-to-br from-[#1C0E11] to-brand-card p-6 sm:p-8 rounded-2xl border border-brand-red/40 flex flex-col justify-between h-full shadow-red-glow">
+            <div>
+              <div class="flex items-center justify-between pb-4 border-b border-white/10">
+                <span class="text-xs uppercase font-extrabold tracking-widest text-zinc-400">Estimated Subtotal</span>
+                <span class="text-xs px-2.5 py-0.5 rounded-full bg-brand-red/20 text-brand-red font-bold">Baytown, TX</span>
+              </div>
+
+              <div class="my-6">
+                <div class="text-5xl sm:text-6xl font-black text-white font-display" id="calc-total-num">$95</div>
+                <div class="text-xs text-zinc-300 mt-2 font-medium" id="calc-summary-desc">
+                  Standard Full Detail for Sedan Car
+                </div>
+              </div>
+
+              <div class="space-y-2.5 py-4 border-t border-white/10 text-xs text-zinc-300">
+                <div class="flex items-center gap-2">
+                  <i data-lucide="map-pin" class="w-4 h-4 text-brand-red"></i>
+                  <span>Facility Drop-off or Mobile at your location</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <i data-lucide="droplet" class="w-4 h-4 text-brand-red"></i>
+                  <span>Mobile requires customer water & power hookup</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i>
+                  <span>Final walk-around inspection before payment</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-6">
+              <button onclick="applyCalculatorToBooking()" class="w-full py-4 rounded-xl bg-brand-red hover:bg-brand-redHover text-white font-extrabold text-sm tracking-wide shadow-red-glow transition flex items-center justify-center gap-2">
+                <span>Book With This Estimate</span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </button>
+              <p class="text-center text-[11px] text-zinc-500 mt-2">Zero payment required to reserve your slot.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Before & After Transformation Slider -->
+  <section id="transformations" class="py-24 bg-brand-dark border-y border-white/5 relative">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-brand-red text-xs font-bold uppercase tracking-widest">Real Results</span>
+        <h2 class="text-3xl sm:text-5xl font-black text-white mt-1">BEFORE & AFTER VISUAL PROOF</h2>
+        <p class="text-zinc-400 text-sm mt-3">
+          Drag the center line left and right to inspect paint gloss restoration, swirl removal, and mirror clarity.
+        </p>
+      </div>
+
+      <!-- Slider Container Box -->
+      <div class="glass-card p-3 sm:p-5 rounded-3xl border border-white/10 max-w-4xl mx-auto shadow-2xl">
+        <div class="comparison-wrapper rounded-2xl aspect-[16/9] w-full relative bg-zinc-950 overflow-hidden cursor-ew-resize" id="split-box">
+          
+          <!-- After Layer (Full width in background) -->
+          <div class="absolute inset-0 w-full h-full">
+            <svg class="w-full h-full object-cover" viewBox="0 0 800 450" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="afterG" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#0E1017"/>
+                  <stop offset="50%" stop-color="#1B202D"/>
+                  <stop offset="100%" stop-color="#08090C"/>
+                </linearGradient>
+                <radialGradient id="ceramicShine" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#E10600" stop-opacity="0.45"/>
+                  <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+                </radialGradient>
+              </defs>
+              <rect width="800" height="450" fill="url(#afterG)"/>
+              <ellipse cx="400" cy="225" rx="360" ry="190" fill="url(#ceramicShine)"/>
+              <!-- High-Gloss Specular Highlight Reflected Curves -->
+              <path d="M 60 360 Q 400 110 740 210" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" opacity="0.9" filter="drop-shadow(0px 0px 10px #FFFFFF)"/>
+              <path d="M 70 370 Q 400 120 730 220" stroke="#E10600" stroke-width="2.5" opacity="0.95"/>
+              <text x="740" y="48" font-family="Orbitron, Inter" font-weight="900" font-size="22" fill="#E10600" text-anchor="end" letter-spacing="2">AFTER: MIRROR FINISH</text>
+              <text x="740" y="74" font-family="Inter" font-size="12" font-weight="600" fill="#E2E8F0" text-anchor="end">Paint Correction & 9H Ceramic Shield</text>
+            </svg>
+          </div>
+
+          <!-- Before Layer (Clipped layer) -->
+          <div class="absolute inset-0 h-full overflow-hidden" id="before-clip-box" style="width: 50%;">
+            <svg class="w-[800px] h-[450px] max-w-none" viewBox="0 0 800 450" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%;">
+              <defs>
+                <linearGradient id="beforeG" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#1A1C22"/>
+                  <stop offset="100%" stop-color="#121316"/>
+                </linearGradient>
+              </defs>
+              <rect width="800" height="450" fill="url(#beforeG)"/>
+              <!-- Swirls, spiderwebs & haze -->
+              <g stroke="#9CA3AF" stroke-width="1.2" opacity="0.5" fill="none">
+                <circle cx="210" cy="210" r="85" stroke-dasharray="7,6"/>
+                <circle cx="220" cy="200" r="115" stroke-dasharray="11,8"/>
+                <circle cx="200" cy="220" r="145" stroke-dasharray="6,9"/>
+                <path d="M 90 140 Q 180 250 290 170"/>
+                <path d="M 110 170 Q 210 270 310 190"/>
+                <path d="M 80 220 Q 240 180 360 260"/>
+                <circle cx="350" cy="190" r="65" stroke-dasharray="8,5"/>
+              </g>
+              <rect width="800" height="450" fill="#475569" opacity="0.22"/>
+              <text x="35" y="48" font-family="Orbitron, Inter" font-weight="900" font-size="22" fill="#FFFFFF" text-anchor="start" letter-spacing="2">BEFORE: OXIDIZED</text>
+              <text x="35" y="74" font-family="Inter" font-size="12" font-weight="600" fill="#CBD5E1" text-anchor="start">Heavy swirls, scratching & dull clear coat</text>
+            </svg>
+          </div>
+
+          <!-- Divider Drag Handle -->
+          <div class="comparison-handle" id="split-handle" style="left: 50%;">
+            <div class="comparison-handle-btn">
+              <i data-lucide="move-horizontal" class="w-5 h-5"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex justify-between items-center px-3 py-3 text-xs text-zinc-400">
+          <span class="flex items-center gap-1 font-semibold text-zinc-300">
+            <i data-lucide="arrow-left" class="w-3.5 h-3.5 text-brand-red"></i> Drag Left to reveal After
+          </span>
+          <span class="text-zinc-500 hidden sm:inline">Client black paint correction demonstration</span>
+          <span class="flex items-center gap-1 font-semibold text-zinc-300">
+            Drag Right to reveal Before <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-brand-red"></i>
+          </span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Facility vs Mobile Comparison & Hookup Transparency -->
+  <section id="facility-mobile" class="py-24 bg-brand-black carbon-texture relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-brand-red text-xs font-bold uppercase tracking-widest">Two Flexible Ways to Service</span>
+        <h2 class="text-3xl sm:text-5xl font-black text-white mt-1">FACILITY-BASED OR MOBILE DETAIL</h2>
+        <p class="text-zinc-400 text-sm sm:text-base mt-2">
+          Whether you want to drop your car off at our Baytown facility or have us detail at your residence or workplace, here is exactly what to expect.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        
+        <!-- Facility Drop-off -->
+        <div class="glass-card rounded-3xl p-8 border border-white/10 relative">
+          <div class="w-12 h-12 rounded-2xl bg-brand-red/20 border border-brand-red/40 flex items-center justify-center text-brand-red mb-6">
+            <i data-lucide="warehouse" class="w-6 h-6"></i>
+          </div>
+          <span class="text-xs uppercase font-extrabold tracking-wider text-brand-red">Controlled Environment</span>
+          <h3 class="text-2xl font-bold text-white mt-1 mb-3">Facility Drop-Off Service</h3>
+          <p class="text-zinc-300 text-sm mb-6">
+            Ideal for multi-stage paint corrections, long-term ceramic coatings, and full day vehicle overhauls in a clean indoor setting away from Texas dust and direct heat.
+          </p>
+          <ul class="space-y-3 text-xs sm:text-sm text-zinc-300">
+            <li class="flex items-center gap-2.5">
+              <i data-lucide="check" class="w-4 h-4 text-brand-red"></i>
+              <span>High-intensity inspection lighting for flawless polishing</span>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i data-lucide="check" class="w-4 h-4 text-brand-red"></i>
+              <span>Controlled curing times for ceramic coatings</span>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i data-lucide="check" class="w-4 h-4 text-brand-red"></i>
+              <span>Secure indoor storage during multi-day jobs</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Mobile Detail Unit -->
+        <div class="glass-card rounded-3xl p-8 border border-brand-red/30 relative bg-gradient-to-br from-brand-surface to-[#1A0E10]">
+          <div class="w-12 h-12 rounded-2xl bg-brand-red/20 border border-brand-red/40 flex items-center justify-center text-brand-red mb-6">
+            <i data-lucide="truck" class="w-6 h-6"></i>
+          </div>
+          <span class="text-xs uppercase font-extrabold tracking-wider text-brand-red">Convenience at Your Door</span>
+          <h3 class="text-2xl font-bold text-white mt-1 mb-3">Mobile Detailing Service</h3>
+          <p class="text-zinc-300 text-sm mb-6">
+            We bring our high-grade machines, steam cleaners, extractors, compounds, and microfiber arsenal directly to your home driveway or workplace.
+          </p>
+          
+          <div class="p-4 rounded-xl bg-brand-black/80 border border-brand-red/40 text-xs text-zinc-300 mb-6 space-y-1.5">
+            <div class="font-bold text-white flex items-center gap-1.5">
+              <i data-lucide="alert-circle" class="w-3.5 h-3.5 text-brand-red"></i>
+              <span>Current Mobile Setup Note:</span>
+            </div>
+            <p>
+              We are actively finalizing our self-contained off-grid rig (water tank & quiet generator). Until completion, mobile appointments require:
+            </p>
+            <ul class="list-disc list-inside text-zinc-400 space-y-0.5 pt-1">
+              <li>1 standard exterior water spigot</li>
+              <li>1 standard 110V electrical outlet within 75ft</li>
+            </ul>
+          </div>
+
+          <div class="text-xs font-semibold text-zinc-400">
+            Covering: Baytown, Mont Belvieu, Highlands, Chambers County & surrounding areas.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Booking Request Form Section -->
+  <section id="booking" class="py-24 bg-brand-dark carbon-texture relative">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-12">
+        <span class="text-brand-red text-xs font-bold uppercase tracking-widest">Reserve Your Appointment</span>
+        <h2 class="text-3xl sm:text-5xl font-black text-white mt-1">ONLINE BOOKING DISPATCH</h2>
+        <p class="text-zinc-400 text-sm mt-3">
+          Lock in your preferred date. Our Baytown team will call or text to confirm arrival details within minutes.
+        </p>
+      </div>
+
+      <div class="glass-card p-6 sm:p-10 rounded-3xl border border-white/10 shadow-2xl relative">
+        <form id="booking-form" class="space-y-6">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            
+            <!-- Full Name -->
+            <div>
+              <label class="block text-xs uppercase font-extrabold text-zinc-300 tracking-wider mb-2">Customer Name *</label>
+              <input type="text" id="b-name" required placeholder="John Doe" class="w-full bg-brand-surface text-white border border-brand-border rounded-xl px-4 py-3.5 text-sm focus:outline-none focus:border-brand-red transition">
+            </div>
+
+            <!-- Phone Number -->
+            <div>
+              <label class="block text-xs uppercase font-extrabold text-zinc-300 tracking-wider mb-2">Phone Number (Call or Text) *</label>
+              <input type="tel" id="b-phone" required placeholder="(346) 660-0690" class="w-full bg-brand-surface text-white border border-brand-border rounded-xl px-4 py-3.5 text-sm focus:outline-none focus:border-brand-red transition">
+            </div>
+
+            <!-- Vehicle Make & Model -->
+            <div>
+              <label class="block text-xs uppercase font-extrabold text-zinc-300 tracking-wider mb-2">Vehicle Year, Make & Model *</label>
+              <input type="text" id="b-vehicle" required placeholder="e.g. 2023 Ford F-250 / 2021 Honda Accord / Can-Am SxS" class="w-full bg-brand-surface text-white border border-brand-border rounded-xl px-4 py-3.5 text-sm focus:outline-none focus:border-brand-red transition">
+            </div>
+
+            <!-- Primary Package Selection -->
+            <div>
+              <label class="block text-xs uppercase font-extrabold text-zinc-300 tracking-wider mb-2">Requested Service Package *</label>
+              <select id="b-package" class="w-full bg-brand-surface text-white border border-brand-border rounded-xl px-4 py-3.5 text-sm focus:outline-none focus:border-brand-red transition">
+                <option value="Standard Full Detail">Standard Full Detail ($95 - $150+)</option>
+                <option value="Ultimate Detail Package">Ultimate Detail Package ($650 - $800+)</option>
+                <option value="ATV Detailing Service">ATV Detailing Service ($125)</option>
+                <option value="Side-by-Side (SxS) ATV Detailing">Side-by-Side (SxS) ATV ($145)</option>
+                <option value="Standalone Ceramic Coating">Standalone Ceramic Coating ($300+)</option>
+                <option value="Standalone Paint Correction">Standalone Paint Correction ($350+)</option>
+                <option value="Custom Multiple Vehicles">Multiple Vehicles / Fleet Inquiry</option>
+              </select>
+            </div>
+
+            <!-- Service Mode: Facility vs Mobile -->
+            <div>
+              <label class="block text-xs uppercase font-extrabold text-zinc-300 tracking-wider mb-2">Service Location Choice *</label>
+              <select id="b-location" class="w-full bg-brand-surface text-white border border-brand-border rounded-xl px-4 py-3.5 text-sm focus:outline-none focus:border-brand-red transition">
+                <option value="Facility Drop-Off">Facility Drop-Off (Baytown Location)</option>
+                <option value="Mobile Service (Customer hookups ready)">Mobile Service (Water & electric spigot ready)</option>
+              </select>
+            </div>
+
+            <!-- Preferred Date -->
+            <div>
+              <label class="block text-xs uppercase font-extrabold text-zinc-300 tracking-wider mb-2">Preferred Date *</label>
+              <input type="date" id="b-date" required class="w-full bg-brand-surface text-white border border-brand-border rounded-xl px-4 py-3.5 text-sm focus:outline-none focus:border-brand-red transition">
+            </div>
+          </div>
+
+          <!-- Add-ons or Special Instructions -->
+          <div>
+            <label class="block text-xs uppercase font-extrabold text-zinc-300 tracking-wider mb-2">Requested Add-ons, Address (for Mobile), or Special Notes</label>
+            <textarea id="b-notes" rows="3" placeholder="List any add-ons (Wax, Pet Hair, Engine Bay, Shampooing), your address if mobile, or questions..." class="w-full bg-brand-surface text-white border border-brand-border rounded-xl p-4 text-sm focus:outline-none focus:border-brand-red transition"></textarea>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="w-full py-4 rounded-xl bg-brand-red hover:bg-brand-redHover text-white font-black text-base tracking-wide shadow-red-glow flex items-center justify-center gap-3 transition">
+            <i data-lucide="check-circle" class="w-5 h-5"></i>
+            <span>Submit Appointment Request</span>
+          </button>
+        </form>
+
+        <!-- Dynamic Success Confirmation Modal -->
+        <div id="booking-alert" class="hidden mt-6 p-6 rounded-2xl bg-emerald-950/80 border border-emerald-500/50 text-center animate-fade-in">
+          <div class="w-12 h-12 bg-emerald-500/20 text-emerald-400 rounded-full flex items-center justify-center mx-auto mb-3">
+            <i data-lucide="check" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-1">Appointment Request Sent!</h3>
+          <p class="text-sm text-zinc-300 max-w-lg mx-auto" id="booking-alert-details">
+            Thank you! We received your request. Our Baytown team will call or text you shortly at (346) 660-0690 to confirm availability.
+          </p>
+          <div class="mt-4 flex justify-center">
+            <a href="tel:3466600690" class="text-xs bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-4 py-2.5 rounded-xl transition inline-flex items-center gap-2">
+              <i data-lucide="phone" class="w-3.5 h-3.5"></i> Need immediate booking? Call (346) 660-0690
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-brand-black border-t border-white/10 pt-16 pb-24 lg:pb-12 text-zinc-400 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+        
+        <!-- Brand Info -->
+        <div class="space-y-4 md:col-span-1">
+          <div class="flex items-center gap-2.5">
+            <div class="w-8 h-8 rounded-lg bg-brand-red flex items-center justify-center text-white font-black text-sm">
+              <i data-lucide="sparkles" class="w-4 h-4"></i>
+            </div>
+            <span class="font-black text-xl text-white font-display tracking-wider">BAYTOWN’S</span>
+          </div>
+          <p class="text-xs text-zinc-400 leading-relaxed">
+            Professional auto & powersports detailing in Baytown, TX. Standard in-and-out details, multi-stage paint correction, and 9H ceramic coatings. Facility drop-off & mobile services available.
+          </p>
+          <div class="flex items-center gap-3 pt-2">
+            <a href="https://instagram.com/baytownautodetailing" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-xl bg-brand-surface border border-white/10 flex items-center justify-center text-zinc-300 hover:text-brand-red hover:border-brand-red transition">
+              <i data-lucide="instagram" class="w-4 h-4"></i>
+            </a>
+            <a href="https://tiktok.com/@baytowns.autodetailing" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-xl bg-brand-surface border border-white/10 flex items-center justify-center text-zinc-300 hover:text-brand-red hover:border-brand-red transition">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.29 0 .58.04.86.12V9.42a6.37 6.37 0 0 0-.86-.06 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 9.79 5.38 6.27 6.27 0 0 0 2.89-5.38V8.92a8.28 8.28 0 0 0 4.88 1.58V7.05a4.85 4.85 0 0 1-1.1-.36z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Direct Contact (NAP) -->
+        <div>
+          <h4 class="text-white font-bold text-sm tracking-wider uppercase mb-4">Direct Contact</h4>
+          <ul class="space-y-3 text-xs">
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="phone" class="w-4 h-4 text-brand-red shrink-0 mt-0.5"></i>
+              <div>
+                <a href="tel:3466600690" class="text-white font-bold hover:text-brand-red transition text-sm">(346) 660-0690</a>
+                <span class="block text-zinc-500">Call or Text anytime</span>
+              </div>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="map-pin" class="w-4 h-4 text-brand-red shrink-0 mt-0.5"></i>
+              <div>
+                <span class="text-white font-medium">Baytown, TX</span>
+                <span class="block text-zinc-500">Facility drop-off & mobile service</span>
+              </div>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="clock" class="w-4 h-4 text-brand-red shrink-0 mt-0.5"></i>
+              <div>
+                <span class="text-white font-medium">Mon – Sat: 8:00 AM – 7:00 PM</span>
+                <span class="block text-zinc-500">Sundays by appointment</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-white font-bold text-sm tracking-wider uppercase mb-4">Pricing Shortcuts</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#services" class="hover:text-brand-red transition">Sedan Full Detail ($95)</a></li>
+            <li><a href="#services" class="hover:text-brand-red transition">Coupe / Mini SUV ($115)</a></li>
+            <li><a href="#services" class="hover:text-brand-red transition">Big SUV / 4-Door ($135)</a></li>
+            <li><a href="#services" class="hover:text-brand-red transition">Dually Trucks ($150+)</a></li>
+            <li><a href="#powersports" class="hover:text-brand-red transition">ATV & SxS Detailing</a></li>
+            <li><a href="#services" class="hover:text-brand-red transition">Ultimate Correction & Ceramic</a></li>
+          </ul>
+        </div>
+
+        <!-- Mobile Operational Policy -->
+        <div>
+          <h4 class="text-white font-bold text-sm tracking-wider uppercase mb-4">Mobile Policy</h4>
+          <p class="text-xs text-zinc-400 mb-3 leading-relaxed">
+            Our self-contained off-grid mobile trailer is actively under construction. Mobile clients must provide accessible water and power hookups on site until completed.
+          </p>
+          <div class="p-3 bg-brand-surface rounded-xl border border-white/5 text-xs text-zinc-300">
+            <span class="font-bold text-white block">Facility appointments open</span>
+            Complete paint corrections and multi-year ceramic cures conducted at our shop.
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Copyright row -->
+      <div class="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 gap-4">
+        <div>
+          &copy; <span id="year-tag">2026</span> Baytown’s AutoDetailing. All Rights Reserved.
+        </div>
+        <div class="flex items-center gap-6">
+          <a href="tel:3466600690" class="text-brand-red font-bold hover:underline">(346) 660-0690</a>
+          <a href="#booking" class="text-zinc-400 hover:text-white">Book Online</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Sticky Mobile Quick-Call & Quick-Book Bar -->
+  <div class="fixed bottom-0 left-0 right-0 z-40 lg:hidden bg-brand-black/95 border-t border-brand-red/30 p-2.5 backdrop-blur-lg flex items-center gap-2">
+    <a href="tel:3466600690" class="flex-1 py-3 px-3 rounded-xl bg-zinc-800 text-white font-bold text-xs flex items-center justify-center gap-2 border border-white/10">
+      <i data-lucide="phone" class="w-4 h-4 text-brand-red"></i>
+      <span>Call (346) 660-0690</span>
+    </a>
+    <a href="#booking" class="flex-1 py-3 px-3 rounded-xl bg-brand-red text-white font-black text-xs flex items-center justify-center gap-2 shadow-red-glow">
+      <i data-lucide="calendar" class="w-4 h-4"></i>
+      <span>Book Detail</span>
+    </a>
+  </div>
+
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Current year stamp
+    document.getElementById('year-tag').textContent = new Date().getFullYear();
+
+    // Default booking date to tomorrow
+    const tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    document.getElementById('b-date').value = tomorrow.toISOString().split('T')[0];
+
+    // Mobile Hamburger Menu Toggle
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    });
+
+    /* =======================================================
+       1. Vehicle Class Matrix (Standard vs Ultimate Packages)
+       ======================================================= */
+    const categoryPricing = {
+      'sedan': {
+        name: 'Sedan Car',
+        standard: '$95',
+        ultimate: '$650'
+      },
+      'coupe-mini': {
+        name: 'Coupe / Single Cab / Mini SUV',
+        standard: '$115',
+        ultimate: '$695'
+      },
+      'big-suv': {
+        name: 'Big SUV / 4-Door Truck',
+        standard: '$135',
+        ultimate: '$785'
+      },
+      'dually': {
+        name: 'Dually Sized Truck',
+        standard: '$150+',
+        ultimate: '$800+'
+      }
+    };
+
+    const catButtons = document.querySelectorAll('.cat-btn');
+    const standardPriceDisplay = document.getElementById('standard-price-display');
+    const standardLabel = document.getElementById('standard-vehicle-label');
+    const ultimatePriceDisplay = document.getElementById('ultimate-price-display');
+    const ultimateLabel = document.getElementById('ultimate-vehicle-label');
+
+    catButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        catButtons.forEach(b => {
+          b.classList.remove('bg-brand-red', 'text-white', 'shadow-red-glow');
+          b.classList.add('text-zinc-400');
+        });
+        btn.classList.add('bg-brand-red', 'text-white', 'shadow-red-glow');
+        btn.classList.remove('text-zinc-400');
+
+        const catKey = btn.getAttribute('data-cat');
+        const data = categoryPricing[catKey];
+        if (data) {
+          standardPriceDisplay.textContent = data.standard;
+          standardLabel.textContent = data.name;
+          ultimatePriceDisplay.textContent = data.ultimate;
+          ultimateLabel.textContent = data.name;
+
+          // Sync into calculator
+          const calcVehicleSelect = document.getElementById('calc-vehicle-class');
+          if (calcVehicleSelect) {
+            calcVehicleSelect.value = catKey;
+            recalculateEstimate();
+          }
+        }
+      });
+    });
+
+    // Helper to send package into booking form
+    window.bookDirect = function(pkgName, priceElemId) {
+      const priceText = document.getElementById(priceElemId).textContent;
+      const selectBox = document.getElementById('b-package');
+      if (selectBox) {
+        for (let i = 0; i < selectBox.options.length; i++) {
+          if (selectBox.options[i].value.includes(pkgName)) {
+            selectBox.selectedIndex = i;
+            break;
+          }
+        }
+      }
+      const notesBox = document.getElementById('b-notes');
+      notesBox.value = `Selected Package: ${pkgName} (${priceText})`;
+      document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
+    };
+
+    window.bookPowersports = function(pkgName, price) {
+      const selectBox = document.getElementById('b-package');
+      if (selectBox) {
+        for (let i = 0; i < selectBox.options.length; i++) {
+          if (selectBox.options[i].value.includes(pkgName)) {
+            selectBox.selectedIndex = i;
+            break;
+          }
+        }
+      }
+      const notesBox = document.getElementById('b-notes');
+      notesBox.value = `Powersports Booking: ${pkgName} ($${price})`;
+      document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
+    };
+
+    /* =======================================================
+       2. Real-Time Interactive Price Calculator
+       ======================================================= */
+    const calcVehicleClass = document.getElementById('calc-vehicle-class');
+    const calcPackageSelect = document.getElementById('calc-package-select');
+    const calcPackageContainer = document.getElementById('calc-package-container');
+    const calcPowersportsNote = document.getElementById('calc-powersports-note');
+    const calcAddonChecks = document.querySelectorAll('.calc-addon-check');
+    const calcTotalNum = document.getElementById('calc-total-num');
+    const calcSummaryDesc = document.getElementById('calc-summary-desc');
+
+    const baseCostMap = {
+      'sedan': { standard: 95, ultimate: 650, name: 'Sedan Car' },
+      'coupe-mini': { standard: 115, ultimate: 695, name: 'Coupe / Single Cab / Mini SUV' },
+      'big-suv': { standard: 135, ultimate: 785, name: 'Big SUV / 4-Door Truck' },
+      'dually': { standard: 150, ultimate: 800, name: 'Dually Sized Truck' },
+      'atv': { standard: 125, ultimate: 125, name: 'ATV Detailing' },
+      'sxs': { standard: 145, ultimate: 145, name: 'Side-by-Side (SxS) ATV' }
+    };
+
+    function recalculateEstimate() {
+      const vClass = calcVehicleClass.value;
+      const isPowersport = (vClass === 'atv' || vClass === 'sxs');
+
+      if (isPowersport) {
+        calcPackageSelect.disabled = true;
+        calcPackageSelect.classList.add('opacity-40');
+        calcPowersportsNote.classList.remove('hidden');
+      } else {
+        calcPackageSelect.disabled = false;
+        calcPackageSelect.classList.remove('opacity-40');
+        calcPowersportsNote.classList.add('hidden');
+      }
+
+      const pkgType = isPowersport ? 'standard' : calcPackageSelect.value;
+      const vehicleInfo = baseCostMap[vClass];
+      let subtotal = vehicleInfo[pkgType];
+
+      // Add-ons
+      let addonsCount = 0;
+      let addonTitles = [];
+      calcAddonChecks.forEach(cb => {
+        if (cb.checked) {
+          subtotal += parseFloat(cb.value);
+          addonsCount++;
+          addonTitles.push(cb.getAttribute('data-title'));
+        }
+      });
+
+      const hasPlus = (vClass === 'dually');
+      calcTotalNum.textContent = `$${subtotal}${hasPlus ? '+' : ''}`;
+
+      const pkgLabel = isPowersport 
+        ? vehicleInfo.name 
+        : (pkgType === 'standard' ? 'Standard Full Detail' : 'Ultimate Detail Package');
+
+      calcSummaryDesc.textContent = `${pkgLabel} for ${vehicleInfo.name} ${addonsCount > 0 ? `(+${addonsCount} add-on${addonsCount > 1 ? 's' : ''})` : ''}`;
+    }
+
+    calcVehicleClass.addEventListener('change', recalculateEstimate);
+    calcPackageSelect.addEventListener('change', recalculateEstimate);
+    calcAddonChecks.forEach(cb => cb.addEventListener('change', recalculateEstimate));
+    recalculateEstimate();
+
+    window.applyCalculatorToBooking = function() {
+      const vClass = calcVehicleClass.value;
+      const isPowersport = (vClass === 'atv' || vClass === 'sxs');
+      const selectBox = document.getElementById('b-package');
+      const notesBox = document.getElementById('b-notes');
+
+      if (isPowersport) {
+        selectBox.value = (vClass === 'atv') ? 'ATV Detailing Service' : 'Side-by-Side (SxS) ATV Detailing';
+      } else {
+        selectBox.value = (calcPackageSelect.value === 'standard') 
+          ? 'Standard Full Detail' 
+          : 'Ultimate Detail Package';
+      }
+
+      // Gather checked add-ons
+      let selectedAddons = [];
+      calcAddonChecks.forEach(cb => {
+        if (cb.checked) selectedAddons.push(cb.getAttribute('data-title'));
+      });
+
+      let text = `Estimated Quote: ${calcTotalNum.textContent} (${calcSummaryDesc.textContent})`;
+      if (selectedAddons.length > 0) {
+        text += `\nIncluded Add-ons: ${selectedAddons.join(', ')}`;
+      }
+      notesBox.value = text;
+
+      document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
+    };
+
+    /* =======================================================
+       3. Interactive Before/After Split Slider
+       ======================================================= */
+    const splitBox = document.getElementById('split-box');
+    const beforeClipBox = document.getElementById('before-clip-box');
+    const splitHandle = document.getElementById('split-handle');
+    let dragging = false;
+
+    function handleSplitMove(clientX) {
+      const rect = splitBox.getBoundingClientRect();
+      let pos = clientX - rect.left;
+      if (pos < 0) pos = 0;
+      if (pos > rect.width) pos = rect.width;
+      const percent = (pos / rect.width) * 100;
+      beforeClipBox.style.width = percent + '%';
+      splitHandle.style.left = percent + '%';
+    }
+
+    splitBox.addEventListener('mousedown', (e) => {
+      dragging = true;
+      handleSplitMove(e.clientX);
+    });
+    window.addEventListener('mouseup', () => dragging = false);
+    window.addEventListener('mousemove', (e) => {
+      if (dragging) handleSplitMove(e.clientX);
+    });
+
+    // Touch support for iPad / mobile
+    splitBox.addEventListener('touchstart', (e) => {
+      dragging = true;
+      handleSplitMove(e.touches[0].clientX);
+    }, { passive: true });
+    window.addEventListener('touchend', () => dragging = false);
+    window.addEventListener('touchmove', (e) => {
+      if (dragging) handleSplitMove(e.touches[0].clientX);
+    }, { passive: true });
+
+    /* =======================================================
+       4. Booking Form Intake
+       ======================================================= */
+    const bookingForm = document.getElementById('booking-form');
+    const bookingAlert = document.getElementById('booking-alert');
+    const bookingAlertDetails = document.getElementById('booking-alert-details');
+
+    bookingForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById('b-name').value;
+      const phone = document.getElementById('b-phone').value;
+      const vehicle = document.getElementById('b-vehicle').value;
+      const pkg = document.getElementById('b-package').value;
+      const loc = document.getElementById('b-location').value;
+      const date = document.getElementById('b-date').value;
+
+      bookingAlertDetails.innerHTML = `
+        Thank you, <strong>${name}</strong>! Your appointment request for <strong>${pkg}</strong> on your <strong>${vehicle}</strong> (${loc}) on <strong>${date}</strong> has been received. Our Baytown team will call or text <strong>${phone}</strong> shortly to confirm your time slot!
+      `;
+
+      bookingAlert.classList.remove('hidden');
+      bookingForm.reset();
+      bookingAlert.scrollIntoView({ behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>
